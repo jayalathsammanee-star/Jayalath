@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.cart-container {
+  background: linear-gradient(to bottom, #f0cfa0, #ffffff);
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.cart-steps {
+display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.step {
+  font-size: 16px;
+  background: #eee;
+  padding: 12px 18px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 16px;
+  position: relative;
+}
+
+.step.active {
+  background: #b95d1f;
+  color: white;
+}
+
+.step small {
+  display: block;
+  font-size: 12px;
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrow {
+  font-size: 24px;
+  color: #777;
+}
+
+.cart-message {
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+.return-link {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #0056b3;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 14px;
+  background: #fff;
+  color: #444;
+}
+
+.social a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: #444;
+}

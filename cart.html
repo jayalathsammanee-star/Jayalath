@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<body>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      background-color: black;
+      border-bottom: 1px solid #ccc;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+      padding: 5px 10px;
+    }
+    .nav-links a.active {
+      background-color: #e6b842;
+      border-radius: 4px;
+    }
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .buy-now {
+      background-color: black;
+      color: white;
+      padding: 8px 15px;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+  </style>
+
+</body>
+
+
+
+
+<header>
+<title>Search & Cart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 10px;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar input {
+      padding: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .cart-icon {
+      font-size: 20px;
+      color: black;
+      cursor: pointer;
+
+    }
+  </style>
+</head>
+<body>
+
+<div class="logo">
+    <img src="logo.jpg" alt="Logo">
+    <div>
+      <strong>Beauty Glow Mist</strong><br>
+      <small>Secrets of Beauty</small>
+    </div>
+  </div>
+  <nav class="nav-links">
+ <a  href="index.html">HOME</a>
+    <a href="product.html">PRODUCTS</a>
+    <a href="about.html">ABOUT US</a>
+    <a href="contact.html">CONTACT</a>
+	 <a href="login.html">LOGIN</a>
+
+  </nav>
+  
+<div class="header-icons">
+  <div class="search-bar">
+    <input type="text" placeholder="Search...">
+    <button><i class="fas fa-search"></i></button>
+  </div>
+<a href="cart.html">
+  <i class="fas fa-shopping-cart cart-icon"></i>
+</div>
+
+</body>
+</html>
+
+  
+      <a href="product.html" class="buy-now">BUY NOW</a>
+  </div>
+</header>
+
+</body>
+</html>
+
+<html lang="en">
+<head>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('bg-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    
+  </style>
+</head>
+<head>
+  <meta charset="UTF-8" />
+  <title>Shopping Cart - Beauty Glow Mist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0 20px;
+    }
+    header {
+      background: Gray;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    header button {
+      background: #d4a73c;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #fff;
+    }
+    header button:hover {
+      background: #b8932a;
+
+    }
+    .cart-container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+    }
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+    .item-info {
+      flex: 1;
+    }
+    .item-name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .item-price {
+      margin-top: 5px;
+      color: #666;
+    }
+    .remove-btn {
+      background: #000000;
+      border: none;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .remove-btn:hover {
+      background: #c0392b;
+    }
+    .empty-cart {
+      text-align: center;
+      color: #777;
+      font-size: 20px;
+      padding: 40px 0;
+    }
+    .cart-footer {
+      margin-top: 20px;
+      text-align: right;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .action-buttons {
+      margin-top: 20px;
+      text-align: right;
+      gap: 15px;
+    }
+    .action-buttons button {
+      background: #d4a73c;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      color: white;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .action-buttons button:hover {
+      background: #b8932a;
+    }
+
+    
+    #paymentModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #paymentModal > div {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      width: 400px;
+      max-width: 90%;
+      position: relative;
+      box-sizing: border-box;
+    }
+    #paymentModal button {
+      cursor: pointer;
+    }
+    #paymentModal form {
+      margin-top: 10px;
+    }
+    #paymentModal input, #paymentModal textarea {
+      width: 100%;
+      padding: 8px 10px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    #paymentModal label {
+      font-weight: bold;
+      font-size: 14px;
+    }
+    #paymentModal .submit-btn {
+      background-color: #d4a73c;
+      border: none;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      margin-top: 10px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+    #paymentModal .close-btn {
+      position: absolute;
+      top: 10px; right: 15px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1> Your Cart</h1>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<div style="background-color:#DEB887; padding: 20px 10px;">
+
+<div class="cart-container" id="cart-container">
+  <!-- Cart items will be inserted here -->
+</div>
+
+
+<div class="cart-footer" id="cart-total">
+  <!-- Total price displayed here -->
+</div>
+
+<div class="action-buttons">
+  <button id="buyMoreBtn" onclick="goToProducts()">Buy More</button>
+  <button id="buyNowBtn" onclick="openPaymentModal()">Buy Now</button>
+</div>
+
+
+<!-- Payment Modal -->
+<div id="paymentModal">
+  <div>
+    <button class="close-btn" id="closeModal">&times;</button>
+    <h2>Choose Payment Method</h2>
+    <button id="cashBtn" style="margin: 10px 10px 20px 0; padding: 10px 20px;">Cash on Delivery</button>
+    <button id="visaBtn" style="margin: 10px 0 20px 0; padding: 10px 20px;">Pay on Visa</button>
+
+    <div id="paymentFormContainer"></div>
+  </div>
+</div>
+
+<script>
+  // Redirect to login if not logged in
+  if (!sessionStorage.getItem('loggedIn')) {
+    window.location.href = 'login.html';
+  }
+
+  const cartContainer = document.getElementById('cart-container');
+  const cartTotal = document.getElementById('cart-total');
+  const paymentModal = document.getElementById('paymentModal');
+  const paymentFormContainer = document.getElementById('paymentFormContainer');
+  const closeModalBtn = document.getElementById('closeModal');
+  const buyNowBtn = document.getElementById('buyNowBtn');
+
+  function renderCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cartContainer.innerHTML = '';
+
+    if (cart.length === 0) {
+      cartContainer.innerHTML = '<div class="empty-cart">Your cart is empty.</div>';
+      cartTotal.textContent = '';
+      buyNowBtn.disabled = true;
+      buyNowBtn.style.opacity = '0.5';
+      return;
+    }
+    buyNowBtn.disabled = false;
+    buyNowBtn.style.opacity = '1';
+
+    let totalPrice = 0;
+    cart.forEach((item, index) => {
+      totalPrice += item.price;
+
+      const div = document.createElement('div');
+      div.className = 'cart-item';
+      div.innerHTML = `
+        <div class="item-info">
+          <div class="item-name">${item.name}</div>
+          <div class="item-price">Rs ${item.price}</div>
+        </div>
+        <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+      `;
+      cartContainer.appendChild(div);
+    });
+
+    cartTotal.textContent = `Total Price: Rs ${totalPrice}`;
+  }
+
+  function removeItem(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+  }
+
+  function logout() {
+    sessionStorage.removeItem('loggedIn');
+    window.location.href = 'login.html';
+  }
+
+  function goToProducts() {
+    window.location.href = 'product.html';
+  }
+
+  function openPaymentModal() {
+    paymentModal.style.display = 'flex';
+    paymentFormContainer.innerHTML = ''; // Clear previous form
+  }
+
+  function closePaymentModal() {
+    paymentModal.style.display = 'none';
+    paymentFormContainer.innerHTML = '';
+  }
+function renderCart() {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cartContainer.innerHTML = '';
+
+  if (cart.length === 0) {
+    cartContainer.innerHTML = '<div class="empty-cart">Your cart is empty.</div>';
+    cartTotal.textContent = '';
+    buyNowBtn.disabled = true;
+    buyNowBtn.style.opacity = '0.5';
+    return;
+  }
+
+  buyNowBtn.disabled = false;
+  buyNowBtn.style.opacity = '1';
+
+  let totalPrice = 0;
+
+  cart.forEach((item, index) => {
+    // Add quantity property if missing
+    if (!item.quantity) item.quantity = 1;
+
+    const itemTotal = item.price * item.quantity;
+    totalPrice += itemTotal;
+
+    const div = document.createElement('div');
+    div.className = 'cart-item';
+    div.innerHTML = `
+      <div class="item-info">
+        <div class="item-name">${item.name}</div>
+        <div class="item-price">Price: Rs ${item.price}</div>
+        <div>
+          Quantity: 
+          <input type="number" min="1" value="${item.quantity}" 
+            onchange="updateQuantity(${index}, this.value)" 
+            style="width: 50px; padding: 5px; margin-top: 5px;">
+        </div>
+        <div class="item-total">Subtotal: Rs ${itemTotal}</div>
+      </div>
+      <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+    `;
+    cartContainer.appendChild(div);
+  });
+
+  cartTotal.textContent = `Total Price: Rs ${totalPrice}`;
+}
+
+function updateQuantity(index, value) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart[index].quantity = parseInt(value) || 1;
+  localStorage.setItem('cart', JSON.stringify(cart));
+  renderCart();
+}
+
+  document.getElementById('cashBtn').onclick = () => {
+    paymentFormContainer.innerHTML = `
+      <form id="codForm">
+        <label>Full Name</label>
+        <input type="text" required placeholder="Full Name" name="fullname" />
+        <label>Delivery Address</label>
+        <textarea required placeholder="Delivery Address" name="address"></textarea>
+        <label>Phone Number</label>
+        <input type="tel" required placeholder="Phone Number" name="phone" />
+        <button type="submit" class="submit-btn">Confirm Cash on Delivery</button>
+      </form>
+    `;
+    document.getElementById('codForm').onsubmit = function(e) {
+      e.preventDefault();
+      alert('Cash on Delivery order placed successfully!');
+      localStorage.removeItem('cart');
+      renderCart();
+      closePaymentModal();
+    };
+  };
+
+  document.getElementById('visaBtn').onclick = () => {
+    paymentFormContainer.innerHTML = `
+      <form id="visaForm">
+        <label>Card Number</label>
+        <input type="text" required placeholder="Card Number" name="cardnumber" pattern="\\d{16}" maxlength="16" />
+        <label>Full Name</label>
+        <input type="text" required placeholder="Full Name" name="fullname" />
+<label>MM/YY</label>
+        <input type="text" required placeholder="MM/YY" name="MM/YY" />
+<label>CVV</label>
+        <input type="text" required placeholder="CVV" name="CVV" />
+
+        <label>Delivery Address</label>
+        <textarea required placeholder="Delivery Address" name="address"></textarea>
+        <label>Phone Number</label>
+        <input type="tel" required placeholder="Phone Number" name="phone" />
+        <button type="submit" class="submit-btn">Pay Now</button>
+      </form>
+    `;
+    document.getElementById('visaForm').onsubmit = function(e) {
+      e.preventDefault();
+      alert('Payment successful! Thank you for your order.');
+      localStorage.removeItem('cart');
+      renderCart();
+      closePaymentModal();
+    };
+  };
+
+  closeModalBtn.onclick = closePaymentModal;
+  window.onclick = function(event) {
+    if (event.target === paymentModal) {
+      closePaymentModal();
+    }
+  };
+
+  renderCart();
+</script>
+
+</body>
+<body>
+
+<img src="cart.jpg" alt="Home Image" width="590" style="float:right; margin-left:20;border-radius: 0 0 0 200px;">
+</body>
+
+<html>
+  
+<!-- Newsletter Sign-Up Section -->
+<div style="background-color:#e6f2f5; padding: 40px 20px; text-align: center;">
+  <h2 style="font-weight: normal; font-size: 28px; color: #333;">SIGN UP FOR<br><strong>THE NEWSLETTER</strong></h2>
+  <form style="margin-top: 30px;">
+    <input type="email" placeholder="E-mail" style="padding: 10px; width: 250px; border: none; border-radius: 20px; margin-right: 10px;">
+    <button type="submit" style="background-color: #d4a73c; color: white; border: none; padding: 10px 25px; border-radius: 25px; cursor: pointer;">Send</button>
+  </form>
+  <p style="margin-top: 20px; color: #555;">Give your inbox a healthy dose of well-being.</p>
+</div>
+
+<!-- Footer -->
+<footer style="text-align: center; padding: 15px; font-size: 14px; background-color: #f5f5f5; color: #555;">
+  © 2025 Beauty Glow Mist. All Rights Reserved.
+</footer>
+</html>
+
+</html>

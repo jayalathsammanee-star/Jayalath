@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>
+online Library Management System
+ </title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to AMU</title>
+    <style>
+
+
+    body {
+      font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #2e2c3a; 
+            color: #ccc;
+
+    }
+    .container {
+      display: flex;
+            background-color: #3b394b;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            width: 900px; 
+            max-width: 90%;
+    }
+    .left-panel {
+      flex: 1;
+      position: relative;
+      background: url('a24.webp') center/cover no-repeat;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 30px;
+      color: white;
+    }
+    .left-panel h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin: 0;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+    .left-panel .subtitle {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+    .back-link {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255,255,255,0.2);
+      padding: 8px 15px;
+      border-radius: 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+    .back-link:hover {
+      background: rgba(255,255,255,0.4);
+    }
+
+    .right-panel {
+      flex: 1;
+      background: #2f2c47;
+      padding: 60px 40px;
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .right-panel h2 {
+      margin: 0 0 15px 0;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    .right-panel p {
+      margin: 0 0 30px 0;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    .right-panel p a {
+      color: #9679e4;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .right-panel p a:hover {
+      text-decoration: underline;
+    }
+    label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      margin-top: 15px;
+      color: #bbb;
+    }
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      outline: none;
+      background: #403d5a;
+      color: white;
+      transition: background 0.3s ease;
+    }
+    input[type="email"]::placeholder,
+    input[type="password"]::placeholder {
+      color: #888;
+    }
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      background: #524f70;
+    }
+    .password-container {
+      position: relative;
+    }
+    .toggle-password {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 1.1rem;
+      color: #9679e4;
+      user-select: none;
+    }
+    .remember-me {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+    .remember-me input {
+      margin-right: 8px;
+    }
+    button.login-btn {
+      margin-top: 30px;
+      padding: 14px 0;
+      width: 100%;
+      background-color: #9679e4;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button.login-btn:hover {
+      background-color: #805dcf;
+    }
+    .divider {
+      margin: 30px 0;
+      text-align: center;
+      color: #555;
+      position: relative;
+    }
+    .divider::before,
+    .divider::after {
+      content: "";
+      height: 1px;
+      width: 40%;
+      background: #555;
+      position: absolute;
+      top: 50%;
+    }
+    .divider::before {
+      left: 0;
+    }
+    .divider::after {
+      right: 0;
+    }
+    .social-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+    .social-btn {
+      flex: 1;
+      background: #403d5a;
+      color: white;
+      border-radius: 10px;
+      padding: 10px 0;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+    .social-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        .social-button {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #555;
+            border-radius: 8px;
+            background-color: #4a485c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .social-button img {
+            margin-right: 8px;
+            width: 20px; /* Adjust as needed */
+            height: 20px;
+        }
+        .social-button:hover {
+            background-color: #5a586d;
+        }
+
+    
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        max-width: 100%;
+        height: auto;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .left-panel {
+        height: 250px;
+        border-radius: 0;
+        background-position: center center;
+        padding: 20px;
+      }
+      .right-panel {
+        padding: 30px 20px;
+        border-radius: 0;
+      }
+    }
+  </style>
+
+  <!-- Load fontawesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left-panel">
+      <a href="index.html" class="back-link">← Back to website</a>
+      <h1>GLOW MIST</h1>
+      <p class="subtitle">Capturing Moments,<br>Creating Memories</p>
+    </div>
+    <div class="right-panel">
+      <h2>Login to your account</h2>
+      <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+
+      <form id="loginForm" onsubmit="return handleLogin(event)">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+        
+        <label for="password">Enter your password</label>
+        <div class="password-container">
+          <input type="password" id="password" placeholder="Enter your password" required />
+          <span class="toggle-password" onclick="togglePassword()">👁️</span>
+        </div>
+
+        <div class="remember-me">
+          <input type="checkbox" id="remember" />
+          <label for="remember">Remember me</label>
+        </div>
+
+        <button type="submit" class="login-btn">Log In</button>
+      </form>
+
+
+      <div class="divider">Or register with</div>
+     <div class="social-buttons">
+                <button class="social-button">
+
+                    <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google icon">
+                    Google
+                </button>
+                <button class="social-button">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/mac-os.png" alt="Apple icon">
+                    Apple
+                </button>
+            </div>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById('password');
+      const type = passwordInput.type === 'password' ? 'text' : 'password';
+      passwordInput.type = type;
+    }
+
+    function handleLogin(e) {
+      e.preventDefault();
+      // Dummy login: accept any non-empty email and password
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      if (email && password) {
+        // Set logged in flag in sessionStorage
+        sessionStorage.setItem('loggedIn', 'true');
+        alert('Login successful!');
+		// Mark user as logged in
+sessionStorage.setItem('loggedIn', 'true');
+
+// Add any pending items saved before login to the main cart
+let pendingItems = JSON.parse(sessionStorage.getItem('pendingCartItems')) || [];
+if(pendingItems.length > 0){
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart = cart.concat(pendingItems);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  sessionStorage.removeItem('pendingCartItems');
+}
+
+// Redirect to the saved page (usually cart page)
+const redirect = sessionStorage.getItem('redirectAfterLogin') || 'home.html';
+sessionStorage.removeItem('redirectAfterLogin');
+window.location.href = redirect;
+
+        // Redirect to cart page after login
+        window.location.href = 'cart.html';
+      } else {
+        alert('Please enter valid credentials');
+      }
+      return false;
+    }
+  </script>
+
+</body>
+</html>
